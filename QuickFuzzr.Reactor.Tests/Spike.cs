@@ -13,6 +13,6 @@ public class Spike
         var user = userFuzzr.Generate(42);
 
         Assert.Equal("Earl Owens", user.Name);
-        Assert.Equal("earl.owens@mail.com", user.Email);
+        Assert.Equal("earl.owens@hotmail.org", user.Email);
     }
 }

@@ -10,12 +10,14 @@ public static partial class Fuze
         let firstNames = isMale ? DataLists.MaleFirstNames : DataLists.FemaleFirstNames
         from firstName in Fuzzr.OneOf(DataLists.FirstNames)
         from lastName in Fuzzr.OneOf(DataLists.LastNames)
+        from emailProvider in Fuzzr.OneOf(DataLists.EmailProviders)
+        from domain in Fuzzr.OneOf(DataLists.TopLevelDomains)
         select new Person
         {
             FirstName = firstName,
             LastName = lastName,
             FullName = $"{firstName} {lastName}",
-            Email = $"{firstName}.{lastName}@mail.com".ToLower(),
+            Email = $"{firstName}.{lastName}@{emailProvider}.{domain}".ToLower(),
             IsMale = isMale
         };
 }
