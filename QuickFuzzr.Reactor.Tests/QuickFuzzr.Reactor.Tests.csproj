@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QuickFuzzr.Reactor\QuickFuzzr.Reactor.csproj" />
+    <ProjectReference Include="..\..\QuickPulse.Show\QuickPulse.Show\QuickPulse.Show.csproj" />
   </ItemGroup>
 
 </Project>
