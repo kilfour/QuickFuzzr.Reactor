@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Bogus" Version="35.6.4" />
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="xunit" Version="2.5.3" />
@@ -23,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\QuickFuzzr.Reactor\QuickFuzzr.Reactor.csproj" />
     <ProjectReference Include="..\..\QuickPulse.Show\QuickPulse.Show\QuickPulse.Show.csproj" />
+    <ProjectReference Include="..\..\QuickPulse.Explains\QuickPulse.Explains\QuickPulse.Explains.csproj" />
   </ItemGroup>
 
 </Project>

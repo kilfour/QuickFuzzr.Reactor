@@ -1,0 +1,107 @@
+"User Created! Name=0"
+"User Created! Name=1"
+"User Created! Name=2"
+[
+    {
+        Id: 0,
+        FirstName: "Laila",
+        LastName: "Luettgen",
+        FullName: "Laila Luettgen",
+        UserName: "Laila99",
+        Email: "Laila52@gmail.com",
+        SomethingUnique: "Value 0",
+        SomeGuid: 1e1b793b-23c8-40a9-b2fa-4900a830ef1a,
+        Avatar: "https://ipfs.io/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/434.jpg",
+        CartId: bd01a88e-7424-495f-af5b-c9d6cda34cf1,
+        SSN: "485-67-8799",
+        Gender: Male,
+        Orders: [
+            {
+                OrderId: 0,
+                Item: "banana",
+                Quantity: 4,
+                LotNumber: null
+            },
+            {
+                OrderId: 1,
+                Item: "apple",
+                Quantity: 7,
+                LotNumber: null
+            },
+            {
+                OrderId: 2,
+                Item: "apple",
+                Quantity: 9,
+                LotNumber: 22
+            }
+        ]
+    },
+    {
+        Id: 1,
+        FirstName: "Heidi",
+        LastName: "Franecki",
+        FullName: "Heidi Franecki",
+        UserName: "Heidi_Franecki88",
+        Email: "Heidi.Franecki@hotmail.com",
+        SomethingUnique: "Value 4",
+        SomeGuid: a5c9dbf3-1f09-4113-90ee-dbc64baf57a2,
+        Avatar: "https://ipfs.io/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/277.jpg",
+        CartId: e4ad3cfe-4082-4511-9ef3-419d353b2e51,
+        SSN: "244-04-1171",
+        Gender: Male,
+        Orders: [
+            {
+                OrderId: 3,
+                Item: "apple",
+                Quantity: 6,
+                LotNumber: null
+            },
+            {
+                OrderId: 4,
+                Item: "kiwi",
+                Quantity: 1,
+                LotNumber: null
+            },
+            {
+                OrderId: 5,
+                Item: "kiwi",
+                Quantity: 8,
+                LotNumber: null
+            }
+        ]
+    },
+    {
+        Id: 2,
+        FirstName: "Yoshiko",
+        LastName: "Sanford",
+        FullName: "Yoshiko Sanford",
+        UserName: "Yoshiko.Sanford17",
+        Email: "Yoshiko78@hotmail.com",
+        SomethingUnique: "Value 8",
+        SomeGuid: 8c38690a-5369-4b8c-9f5b-ba4292a4c49b,
+        Avatar: "https://ipfs.io/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/434.jpg",
+        CartId: cc740c5c-db6c-49e5-b5aa-fe91b3498040,
+        SSN: "870-30-8159",
+        Gender: Male,
+        Orders: [
+            {
+                OrderId: 6,
+                Item: "strawberry",
+                Quantity: 1,
+                LotNumber: null
+            },
+            {
+                OrderId: 7,
+                Item: "banana",
+                Quantity: 4,
+                LotNumber: null
+            },
+            {
+                OrderId: 8,
+                Item: "apple",
+                Quantity: 4,
+                LotNumber: null
+            }
+        ]
+    }
+]
