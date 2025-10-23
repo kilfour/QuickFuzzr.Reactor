@@ -52,9 +52,9 @@ public class A_UsingBogus
            .RuleFor(u => u.UserName, (f, u) => f.Internet.UserName(u.FirstName, u.LastName))
            .RuleFor(u => u.Email, (f, u) => f.Internet.Email(u.FirstName, u.LastName))
            .RuleFor(u => u.SomethingUnique, f => $"Value {f.UniqueIndex}")
-           .RuleFor(u => u.SomeGuid, Guid.NewGuid)
+           .RuleFor(u => u.SomeGuid, f => f.Random.Guid())
            .RuleFor(u => u.Gender, f => f.PickRandom<Gender>())
-           .RuleFor(u => u.CartId, f => Guid.NewGuid())
+           .RuleFor(u => u.CartId, f => f.Random.Guid())
            .RuleFor(u => u.FullName, (f, u) => u.FirstName + " " + u.LastName)
            .RuleFor(u => u.Orders, f => testOrders.Generate(3))
            .FinishWith((f, u) => $"User Created! Name={u.Id}".PulseToLog(logFile));
