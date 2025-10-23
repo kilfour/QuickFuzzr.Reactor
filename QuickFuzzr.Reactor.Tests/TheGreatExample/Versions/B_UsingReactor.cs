@@ -11,7 +11,7 @@ public class B_UsingReactor
 {
     const string logFile = "./QuickFuzzr.Reactor.Tests/TheGreatExample/Versions/using-reactor-result.txt";
 
-    [Fact]
+    [Fact(Skip = "explicit")]
     [DocHeader("The Fuzzr")]
     [DocExample(typeof(B_UsingReactor), nameof(TheFuzzr))]
     [DocHeader("Execution")]

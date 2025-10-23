@@ -11,7 +11,7 @@ public class A_UsingBogus
 {
     const string logFile = "./QuickFuzzr.Reactor.Tests/TheGreatExample/Versions/using-bogus-result.txt";
 
-    [Fact]
+    [Fact(Skip = "explicit")]
     [DocHeader("The Faker")]
     [DocExample(typeof(A_UsingBogus), nameof(TheFaker))]
     [DocHeader("Execution")]
