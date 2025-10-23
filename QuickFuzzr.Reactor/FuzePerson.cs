@@ -1,4 +1,5 @@
 using QuickFuzzr.Reactor.Lists;
+using QuickFuzzr.Reactor.Models;
 
 namespace QuickFuzzr.Reactor;
 

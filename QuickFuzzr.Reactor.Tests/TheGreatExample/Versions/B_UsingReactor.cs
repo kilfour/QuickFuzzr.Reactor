@@ -35,10 +35,9 @@ public class B_UsingReactor
     private static FuzzrOf<User> TheFuzzr()
     {
         var orderFuzzr =
-            from _1 in Configr<Order>.Property(a => a.OrderId, Fuzzr.Counter("order-id"))
-            from _2 in Configr<Order>.Property(a => a.Item, Fuze.Fruit)
-            from _3 in Configr<Order>.Property(a => a.Quantity, Fuzzr.Int(1, 10))
-            from _4 in Configr<Order>.Property(a => a.LotNumber, Fuzzr.Int(0, 99).Nullable(0.8))
+            from _1 in Configr<Order>.Property(a => a.Item, Fuze.Fruit)
+            from _2 in Configr<Order>.Property(a => a.Quantity, Fuzzr.Int(1, 10))
+            from _3 in Configr<Order>.Property(a => a.LotNumber, Fuzzr.Int(0, 99).Nullable(0.8))
             from order in Fuzzr.One<Order>()
             select order;
 
@@ -49,7 +48,8 @@ public class B_UsingReactor
             select $"{a}-{b}-{c}";
 
         var userFuzzr =
-            from info in Fuze<User>.With(new PersonalInfo())
+            from _ in Fuze.IdProperties
+            from info in Fuze<User>.With(Personal.Info)
             from _1 in Configr<User>.Ignore(a => a.Id)
             from _2 in Configr<User>.Ignore(a => a.SSN)
             from _3 in Configr<User>.Property(a => a.Avatar, Fuze.Avatar)

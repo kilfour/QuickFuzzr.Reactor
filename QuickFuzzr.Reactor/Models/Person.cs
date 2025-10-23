@@ -1,4 +1,4 @@
-namespace QuickFuzzr.Reactor;
+namespace QuickFuzzr.Reactor.Models;
 
 public class Person
 {
