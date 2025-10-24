@@ -17,8 +17,8 @@ public class Course : DomainEntity<Course>
     public IReadOnlyCollection<TimeSlot> TimeSlots => timeSlots.AsReadOnly();
     private List<TimeSlot> timeSlots = [];
 
-    public IReadOnlyCollection<Skill> RequiredSkills => requiredSkills.AsReadOnly();
-    private readonly List<Skill> requiredSkills = [];
+    public IReadOnlyCollection<Skill> RequiredSkills => requiredSkills.ToList().AsReadOnly();
+    private readonly HashSet<Skill> requiredSkills = [];
 
     public bool IsConfirmed { get; private set; }
     public Coach? AssignedCoach { get; private set; }
@@ -55,7 +55,9 @@ public class Course : DomainEntity<Course>
         Course OverWriteRequiredSkills()
         {
             requiredSkills.Clear();
-            requiredSkills.AddRange(newSkills.Select(Skill.From));
+            newSkills.Select(Skill.From)
+                .ToList()
+                .ForEach(a => requiredSkills.Add(a));
             return this;
         }
         // ------------------------------------------------------------------------------------------------

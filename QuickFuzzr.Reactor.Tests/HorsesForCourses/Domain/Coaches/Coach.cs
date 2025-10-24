@@ -33,11 +33,12 @@ public class Coach : DomainEntity<Coach>
             => actor.CanCreateCoach();
     }
 
-    public virtual void UpdateSkills(Actor actor, IEnumerable<string> newSkills)
+    public virtual Coach UpdateSkills(Actor actor, IEnumerable<string> newSkills)
     {
         OnlyAdminsAndActorsWhoRegisteredAsCoachCanEdit();
         NotAllowedWhenThereAreDuplicateSkills();
         OverwriteSkills();
+        return this;
         // ------------------------------------------------------------------------------------------------
         // --
         void OnlyAdminsAndActorsWhoRegisteredAsCoachCanEdit()

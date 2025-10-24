@@ -2,6 +2,7 @@ using System.Security.Claims;
 using QuickFuzzr.Reactor.Tests.HorsesForCourses.Abstractions;
 using QuickFuzzr.Reactor.Tests.HorsesForCourses.Domain.Accounts;
 using QuickFuzzr.Reactor.Tests.HorsesForCourses.Domain.Coaches;
+using QuickPulse.Show;
 
 namespace QuickFuzzr.Reactor.Tests;
 
@@ -25,10 +26,7 @@ public class GenericIdentityTests
         var fuzzr =
             from coachId in Fuzzr.Counter("coach-id")
             from _1 in Configr<Id<Coach>>.Construct(() => Id<Coach>.From(coachId))
-            from person in Fuze.Person
-            from _2 in Configr<Coach>.Construct(() => Coach.Create(Admin, person.FullName, person.Email))
-            from _3 in Configr<Coach>.Ignore(a => a.Name)
-            from _4 in Configr<Coach>.Ignore(a => a.Email)
+            from _2 in Configr<Coach>.Construct(() => Coach.Create(Admin, "name", "email"))
             from coach in Fuzzr.One<Coach>()
             select coach;
         var coaches = fuzzr.Many(3).Generate().ToList();
